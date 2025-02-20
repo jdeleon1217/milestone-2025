@@ -581,8 +581,6 @@ footer {
     #intro-text h1 {
         font-size: 2em;
     }
-
-
 }
 
 
@@ -637,13 +635,13 @@ footer {
     .contact-desc, .castle-item {
         width: 100%;
     }
-    .carousel-container {
-        overflow: hidden;
+    .carousel {
+        max-height: 300px;
+        max-width: 100%;
     }
     .carousel-container img {
-        height: 300px;
-        width: 100%;
-        object-fit: contain;
+        max-height: 300px;
+        max-width: 100%;
     }
 }
 
@@ -702,12 +700,9 @@ footer {
         font-size: 25px;
     }
 
-    .carousel-container {
-        height: 420px;
-    }
-
-    .carousel-container img {
-        object-fit: contain;
+    .carousel {
+        height: 0px;
+        
     }
 }
 
@@ -809,22 +804,24 @@ footer {
 .carousel-container {
     position: relative;
     width: 100%;
-    height: auto; /* Adjust as needed */
-    min-height: 300px; /* Ensure enough height */
+    height: auto; 
+    min-height: 300px;
     overflow: hidden;
 }
 
 .carousel {
     display: flex;
     max-width: 100%;
-    height: auto;
+    height: 740px;
     position: relative;
 }
 
 .carousel-image {
-    max-width: 100%;
-    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
     object-fit: cover;
+    height: 740px;
+    width: 100%;
     position: absolute;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
