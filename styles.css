@@ -1,0 +1,909 @@
+html {
+    font-size: 16px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+    background-color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*<---------------Container for all pages--------------->*/
+.container, .foot-left, .foot-right {
+    width: 92%;
+    margin: auto;
+    height: 100%;
+}
+
+
+.banner img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 740px;
+    width: 100%;
+}
+
+
+#intro-text {
+    position: absolute;
+    top: auto;
+    left: 40px;
+}
+
+#intro-text h1 {
+    font-size: 4em;
+    position: absolute;
+}
+
+/*<---------------Banner for each castle pages--------------->*/
+
+.banner-castle img, .banner .carousel-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 740px;
+    max-height: 1200px;
+    width: 100%;
+}
+
+
+#banner-title h1 {
+    font-size: 3em;
+    position: absolute;
+    left: 40px;
+    bottom: 3%;
+}
+
+/*<---------------Navigation bar--------------->*/
+
+.nav {
+    margin-bottom: 1rem;
+}
+
+.navigation {
+    background-color: rgb(218, 41, 28);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    flex: 0 1 60%;
+}
+
+h1 {
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 4px black;
+
+    }
+    
+.navigation ul {
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0 auto 0;
+    padding: 0;
+    float: right;
+}
+
+
+.navigation a {
+    color: rgb(255, 255, 255);
+    padding: 10px 20px; 
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-shadow: 1px 2px 2px black;
+    transition: all 0.3s ease;
+}
+
+.navigation a:hover {
+    color: rgb(255, 252, 90);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px; 
+}
+
+.navigation a:active {
+    color: rgb(27, 228, 238);
+}
+
+
+/*<---------------Dropdown container--------------->*/
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(218, 41, 28);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/*Dropdown items*/
+.dropdown ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown ul li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/*Show the dropdown when hovering over the parent link*/
+.navigation li:hover .dropdown {
+    display: block;
+}
+
+/*Page title for castle.html, about.html and info.html*/
+#page-title, .home-title h2 {
+    margin: 1em 0 2em 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px gray;
+    font-size: 3em;
+}
+
+
+/*<---------------Home section--------------->*/
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    margin-top: 2em;
+}
+
+.home-intro {
+    height: 100%;
+    width: 80%;
+    text-align: center;
+    padding: 15px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-intro h2 {
+    font-size: 3em;
+}
+
+.home-intro > p {
+    font-size: 20px;
+}
+
+/*<---------------Castle Gallery Section--------------->*/
+section {
+    margin-top: 10em;
+}
+
+.home-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+} 
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(9, auto); 
+    gap: 20px; 
+    padding: 20px;
+    ;
+    margin: 0 auto;
+}
+
+.grid-item {
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.grid-item img {
+    width: 400px;
+    height: 300px;
+    border: 4px solid rgb(120, 117, 117);
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.grid-item h3 {
+    font-size: 1.5em;
+    margin: 20px 5px 10px 5px;
+}
+
+.grid-item h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+/*<---------------Hover Effect for .grid-item--------------->*/
+.grid-item .hover-text {
+    visibility: visible;
+    position: absolute;
+    float: left;
+    bottom: 0%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 5px;
+    font-size: 2em;
+    transition: 0.3s ease;
+    text-shadow: 2px 2px 4px black
+}
+.grid-item:hover .hover-text {
+    visibility: visible;
+}
+.grid-item:hover img {
+    filter: blur(2px);
+}
+
+
+/*<---------------Footer--------------->*/
+footer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    margin-top: 4em;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-left a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-right small {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+/*<---------------Social Media Links--------------->*/
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    display: inline;
+}
+
+.social-links a img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+/*<---------------For the pages Castle pages, About Us, and Contact Info--------------->*/
+
+/*@castles.html as "Castles"*/
+
+.castle-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 20px; 
+}
+
+.castle-gallery h2{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+} 
+
+.castle-item {
+    text-align: left;
+    background-color: rgb(222, 222, 222);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.castle-item img {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid rgb(120, 117, 117);
+    border-radius: 10px;
+}
+
+.castle-item h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.castle-item a {
+    color: white;
+    text-align: center;
+    font-style: oblique;
+    text-decoration: none;
+    background-color: rgb(105, 105, 105);
+    border: 2px solid rgb(105, 105, 105);
+    border-radius: 5px;
+}
+.castle-item a:hover {
+    text-decoration: underline dotted;
+}
+.castle-item a:active {
+    color: rgba(136, 229, 255, 0.995);
+}
+
+.mini-content {
+    margin-bottom: 20px;
+}
+
+.mini-content article{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.open-hours> h3,.price > h3, .visitor-info > h3, .dining > h3, .directions > h3 {
+    text-decoration: underline;
+}
+
+.dining a {
+    color: rgb(33, 12, 220);
+    font-style: normal;
+    background-color: transparent;
+    border: none;
+    
+}
+
+/*@about.html as "About Us"*/
+
+.about-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.office-img img {
+    height: 333px;
+    border-radius: 10px;
+    border: 4px solid rgb(238, 238, 238);
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.office-img figcaption {
+    margin-top: 1em;
+    text-transform: capitalize;
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+}
+
+.about-desc {
+    flex: 1;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+#link-naosc {
+    color: black;
+    text-decoration: none;
+    
+}
+
+#link-naosc:hover {
+    text-decoration: underline dotted;
+}
+
+/*@info.html as "Contact Information"*/
+.info-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.map-img iframe {
+    width: 600px; 
+    height: 450px;
+    border-radius: 10px;
+    border: 4px solid rgb(238, 238, 238);
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-desc {
+    flex: 1;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    align-self: center;
+    max-width: 250px; 
+    max-height: 300px;
+}
+
+#link-naosc {
+    color: black;
+    text-decoration: none;
+    
+}
+
+#link-naosc:hover {
+    text-decoration: underline dotted;
+}
+
+
+#info-form {
+    text-align: center;
+    margin-top: 5em;
+}
+
+#info-form .newsletter{
+    text-align: center;
+}
+
+#form-label {
+    text-align: left;
+}
+
+
+/*<---------------For all functionalities relating to Responsive Design and JavaScript--------------->*/
+
+/* Responsive design for mobile phones */
+
+@media only screen and (max-width: 430px) {
+    .navigation a{
+        padding: 2px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .info-details, .home, .home-item, .about-details, .castle-gallery {
+       flex-direction: column;
+       align-items: center;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .grid-item {
+        width: 100%;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .home-img img, .map-img iframe, .castle-gallery iframe {
+        width: 250px;
+        height: 350px;
+    }
+
+    .castle-gallery iframe {
+        width: 250px;
+        height: 200px;
+    }
+
+    .office-img img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        margin-top: 1em;
+        align-items: center;
+    }
+
+    .banner img {
+        height: 300px;
+    }
+    
+    .navigation li {
+        text-align: center;
+        width: 100%; /* Set a max-width to control the width */
+
+    }
+
+    #intro-text h1 {
+        font-size: 2em;
+    }
+
+
+}
+
+
+/* Responsive design for medium-size mobile phones */
+
+@media only screen and (max-width: 576px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .home-intro {
+        width: 100%;
+    }
+
+    .contact-desc {
+        width: 100%; 
+        height: auto;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .grid-item {
+        width: 100%;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .grid-item {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .nav {
+        margin-bottom: 2em;
+    }
+
+    .navigation li {
+        font-size: 12px;
+        justify-content: center;
+    }
+
+    .footer-container {
+        padding: 10px;
+    }
+
+    .contact-desc, .castle-item {
+        width: 100%;
+    }
+    .carousel-container {
+        overflow: hidden;
+    }
+    .carousel-container img {
+        height: 300px;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+
+/* Responsive design for tablets */
+
+@media only screen and (max-width: 576px), (max-width: 900px) {
+    .home, .about-details, .castle-gallery, .contact-section {
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #map iframe, .castle-gallery iframe, .map-img iframe {
+        width: 350px;
+        height: 450px;
+    }
+
+    .castle-gallery iframe {
+        width: 300px;
+        height: 250px;
+    }
+
+    .office-img img {
+        width: 300px;
+        height: 200px;
+    }
+
+    
+    .footer-container, .navigation {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        margin-top: 1em;
+        align-items: center;
+    }
+
+    .nav {
+        margin-bottom: 1em;
+    }
+
+    .navigation h1{
+        font-size: 3em;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .navigation a {
+        font-size: 25px;
+    }
+
+    .carousel-container {
+        height: 420px;
+    }
+
+    .carousel-container img {
+        object-fit: contain;
+    }
+}
+
+@media only screen  and (min-width: 1080px) and (max-width: 1100px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+}
+
+/* Responsive design for laptops and desktops */
+
+@media only screen and (min-width: 1200px) {
+    .castle-gallery img, .castle-gallery iframe {
+        width: 700px;
+        height: 500px;
+    }
+    .mini-content {
+        width: 50%;
+        margin: auto auto 20px auto;
+        height: 100%;
+        border: 2px solid none;
+    }
+}
+
+
+/*Toggle dark or light mode*/
+
+.dark-mode, .dark-mode .home,
+.dark-mode .about-details, 
+.dark-mode .info-details {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode header, 
+.dark-mode footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+.dark-mode .navigation {
+    background-color: #333;
+}
+
+.dark-mode .navigation a {
+    color: #e0e0e0;
+}
+
+.dark-mode .navigation a:hover {
+    color: #f9d342;
+}
+
+.dark-mode .dropdown {
+    background-color: #333;
+}
+
+.dark-mode .dropdown ul li a {
+    color: white;
+}
+
+.dark-mode .home-intro, 
+.dark-mode .about-desc, 
+.dark-mode .contact-desc,
+.dark-mode .castle-item  {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .grid-item {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .grid-item img {
+    border-color: #888;
+}
+
+.dark-mode .grid-item .hover-text {
+    color: #f9d342;
+}
+
+/* Dark mode for buttons */
+
+.dark-mode button {
+    background-color: #444;
+    color: white;
+    border: 1px solid white;
+}
+
+.dark-mode button:hover {
+    background-color: #666;
+}
+
+
+/*Image carousel*/
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust as needed */
+    min-height: 300px; /* Ensure enough height */
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.carousel-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 50px;
+    opacity: 0.2;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.5;
+}
+
+
+/*Modal window*/
+
+.modal {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal.show {
+    display: block;
+    opacity: 1;
+  }
+
+
+  /*Category filter*/
+
+  .grid-container {
+    overflow: hidden;
+  }
+
+  .btn-data {
+    border: 1px;
+    border-radius: 10px;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .btn-data:hover {
+    background-color: #ddd;
+  }
+  
+  .btn-data.active {
+    background-color: #666;
+    color: white;
+  }
+
+.grid-item{
+    display: none;
+}
+
+  .grid-item.show {
+    display: block;
+  }
+  

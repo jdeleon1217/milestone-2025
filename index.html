@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>
+            Welcome to VisitCastles
+        </title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--For mobile devices-->
+        <script src="../VisitCastles/js_visitcastle/dark-mode.js"></script>
+        <script src="../VisitCastles/js_visitcastle/category-filter.js" defer></script>
+        <script src="../VisitCastles/js_visitcastle/image-sliders.js" defer></script>
+    </head>
+    <body>
+            <header>
+                <nav>
+                    <div class="navigation">
+                        <h1>VisitCastles</h1>
+                        <div class="nav">
+                            <ul>
+                                <li><a href="../VisitCastles/index.html" class="nav-link">Home</a></li>
+                                <li>
+                                    <a href="#castle-section" class="nav-link">Castles</a> 
+                                    <div class="dropdown">
+                                        <ul>
+                                            <li><a href="../VisitCastles/castles/chillon.html">Chillon Castle</a></li>
+                                            <li><a href="../VisitCastles/castles/gruyeres.html">Gruyères Castle</a></li>
+                                            <li><a href="../VisitCastles/castles/thun.html">Thun Castle</a></li>
+                                            <li><a href="../VisitCastles/castles/yverdon.html">Yverdon Castle</a></li>
+                                            <li><a href="../VisitCastles/castles/lenzburg.html">Lenzburg Castle</a></li>
+                                            <li><a href="../VisitCastles/castles/rapperswil.html">Rapperswil Castle</a></li>
+                                            <li><a href="../VisitCastles/castles/wildegg.html">Wildegg Castle</a></li>
+                                            <li><a href="../VisitCastles/castles/meggenhorn.html">Meggenhorn Castle</a></li>
+                                            <li><a href="../VisitCastles/castles/kyburg.html">Kyburg Castle</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="../VisitCastles/about.html" class="nav-link">About Us</a></li>
+                                <li><a href="../VisitCastles/info.html" class="nav-link">Contact Info</a></li>
+                                <li><button type="button" onclick="toggleDarkMode()">☀️</button></li>
+                            </ul>
+                        </div>
+                    </div>                 
+                    <div class="carousel-container">
+                        <div class="carousel">
+                            <img src="images/sliders/burgdorf-slide.jpeg" alt="Burgdorf Castle" class="carousel-image">
+                            <img src="images/sliders/chillon-slide.jpg" alt="Chillon Castle" class="carousel-image">
+                            <img src="images/sliders/gruyeres-slide.jpg" alt="Gruyères Castle" class="carousel-image">
+                            <img src="images/sliders/lenzburg-slide.jpg" alt="Lenzburg Castle" class="carousel-image">
+                            <img src="images/sliders/meggenhorn-slide.jpg" alt="Meggenhorn Castle" class="carousel-image">
+                            <img src="images/sliders/rapperswill-slide.jpg" alt="Rapperswil Castle" class="carousel-image">
+                        </div>    
+                        <button class="prev" onclick="prevSlide()">&#10094;</button>
+                        <button class="next" onclick="nextSlide()">&#10095;</button>
+                    </div>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="home">
+                    <article class="home-intro">
+                        <h2>Discover the Magic of Swiss Castles: A Journey Through Time and Legend</h2>
+                        <p>
+                            Step into a world of history, legends, and breathtaking landscapes. VisitCastles invites you to explore Switzerland’s most stunning castles, from towering medieval fortresses to elegant lakeside palaces. Perched on hilltops, nestled by serene waters, or hidden within lush valleys, these castles offer a glimpse into the lives of knights, nobles, and centuries of heritage.<br><br>
+                            Wander through grand halls, climb ancient watchtowers, and uncover the stories etched into every stone. Many castles have been transformed into museums, housing priceless artifacts, historical exhibitions, and art collections that bring the past to life. Whether you're a history lover, an adventurer, or simply seeking unforgettable views, let Switzerland’s castles inspire your next journey.<br><br>
+                            Beyond their history, these castles are set against some of the most breathtaking scenery in Europe. Imagine strolling through Gruyères Castle with the Alps as your backdrop or standing atop Chillon Castle, gazing over Lake Geneva’s shimmering waters. Whether you explore by car, bike, or scenic train, each visit becomes part of an unforgettable adventure.<br><br>
+                            Plan your visit with our curated guides, insider tips, and must-see destinations. Discover Switzerland’s castles, where every tower, gate, and courtyard has a story to tell—your journey through time begins here!
+                        </p>
+                    </article>
+                </div>
+                
+                <!--Section for "Our Castles" gallery selection-->
+                <section id="castle-section" class="castle-container">      
+                    <div class="home-title" id="our-castles">
+                        <h2> Our Castles</h2>
+                    </div>
+                    <div id="button-filter">
+                        <button class="btn-data active" data-category="all">Show all</button>
+                        <button class="btn-data" data-category="romandy">Romandy</button>
+                        <button class="btn-data" data-category="north">North</button>
+                        <button class="btn-data" data-category="central">Central</button>
+                        <button class="btn-data" data-category="hill">Hill castle</button>
+                        <button class="btn-data" data-category="lake">Lakeside castle</button>
+                        <button class="btn-data" data-category="early">10th-12th century</button>
+                        <button class="btn-data" data-category="middle">13th-16th century</button>
+                        <button class="btn-data" data-category="late">Late period</button>
+                    </div>
+                    
+                    <div class="grid-container"> 
+                        <div class="grid-item romandy early lake"><!--Chillon Castle-->
+                            <a href="../VisitCastles/castles/chillon.html">
+                                <img src="images/chillon/chillon.jpg" alt="Chillon Castle">
+                                <div class="hover-text">Chillon Castle</div>
+                            </a>
+                        </div>
+                        <div class="grid-item romandy middle hill"> <!--Gruyères Castle-->
+                            <a href="../VisitCastles/castles/gruyeres.html">
+                                <img src="images/gruyeres/gruyeres.jpg" alt="Gruyéres Castle">
+                                <div class="hover-text">Gruyéres Castle</div>
+                            </a>
+                        </div>
+                        <div class="grid-item central early hill"> <!--Thun Castle-->
+                            <a href="../VisitCastles/castles/thun.html">
+                                <img src="images/thun/thun_castle.JPG" alt="Thun Castle">
+                                <div class="hover-text">Thun Castle</div>
+                            </a>
+                        </div>
+                        <div class="grid-item romandy middle lake"><!--Yverdon Castle-->
+                            <a href="../VisitCastles/castles/yverdon.html">
+                                <img src="images/yverdon/yverdon_castle.jpg" alt="Yverdon Castle">
+                                <div class="hover-text">Yverdon Castle</div>
+                            </a>
+                        </div>
+                        <div class="grid-item north early hill"><!--Lenzburg Castle-->
+                            <a href="../VisitCastles/castles/lenzburg.html">
+                                <img src="images/lenzburg/lenzburg-castle.jpg" alt="Lenzburg Castle">
+                                <div class="hover-text">Lenzburg Castle</div>
+                            </a>
+                        </div>
+                        <div class="grid-item north middle lake"><!--Rapperswil Castle-->
+                            <a href="../VisitCastles/castles/rapperswil.html">
+                                <img src="images/rapperswil/rapperswil-castle.jpg" alt="Rapperswil Castle">
+                                <div class="hover-text">Rapperswil Castle</div>
+                            </a>
+                        </div>
+                        <div class="grid-item north middle hill"><!--Wildegg Castle-->
+                            <a href="../VisitCastles/castles/wildegg.html">
+                                <img src="images/wildegg/wildegg-castle.jpg" alt="Wildegg Castle">
+                                <div class="hover-text">Wildegg Castle</div>
+                            </a>
+                        </div>
+                        <div class="grid-item central late lake"><!--Meggenhorn Castle-->
+                            <a href="../VisitCastles/castles/meggenhorn.html">
+                                <img src="images/meggenhorn/meggenhorn-castle.jpg" alt="Meggenhorn Castle">
+                                <div class="hover-text">Meggenhorn Castle</div>
+                            </a>
+                        </div>
+                        <div class="grid-item north early hill"><!--Kyburg Castle-->
+                            <a href="../VisitCastles/castles/kyburg.html">
+                                <img src="images/kyburg/kyburg-castle.png" alt="Kyburg Castle">
+                                <div class="hover-text">Kyburg Castle</div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <address>
+                            Route de Meyrin 148<br>
+                            1216 Cointrin, Geneva, Switzerland<br>
+                            Tel: <a href="tel:+41627411212">+41 (0)62 741 12 12</a><br>
+                            Email: <a href="mailto:contact@visitcastle.ch">contact@visitcastle.ch</a>
+                        </address>
+                    </div>
+                    <div class="footer-right">
+                        <ul class="social-links" aria-label="social media links">
+                            <li><a href="#"><img src="images/social_media/facebook-icon.png" alt="Facebook"></a></li>
+                            <li><a href="#"><img src="images/social_media/twitter-icon.png" alt="Twitter"></a></li>
+                            <li><a href="#"><img src="images/social_media/instagram-icon.png" alt="Instagram"></a></li>
+                        </ul>
+                        <small>© 2024 VisitCastles SA</small>
+                    </div>
+                </div>
+            </footer>
+            <script src="../VisitCastles/js_visitcastle/smooth-scroll.js" defer></script>
+    </body>
+</html>
